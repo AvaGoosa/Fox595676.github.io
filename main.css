@@ -112,6 +112,10 @@ hr {
 
 /* Neobuttons */
 
+#neobuttons {
+  max-width: 1000px;
+}
+
 .neobutton {
   display: inline;
   font-size: 80%;

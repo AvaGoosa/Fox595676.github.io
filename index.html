@@ -1,254 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="main.css">
 	<link rel="icon" type="image/x-icon" href="pfp/oldpfphighresbgrounded.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<script src="index.js"></script>
 	<title>Ava's Kitchen Cupboard</title>
+
+	<style>
+		body {
+			background-image: url("resources/vrc3.png");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: 90%;
+			background-size: contain;
+			background-color: #000000;
+		}
+	</style>
 </head>
 
-<style>
-	body {
-	 	background-image: url("resources/vrc3.png");
-		background-repeat:no-repeat;
-		background-attachment: fixed;
-		background-position: 90%;
-		background-size:contain;
-		background-color: #000000;
-		background-blend-mode: mix;
-	}
-</style>
-
 <body>
-	
-	<h2 style="font-size:7vw;padding-left:5%;"> Coming soon... </h2>
 
+	<h1 style="font-size:7vw;padding-left:5%;"> Coming soon... </h1>
 	<p>Welcome to this site!</p>
-
 	<p>As you can see, not much is going on right now.. There will be soon!</p>
 
-	
-
 	<section id="my-stuff">
-		<h2>My Stuff:</h2>
-			<!-- Kinda proud of these containers :3 -->
-			<div class="tile-container">
-				<a href="vr/echo/install" class="tile" data-title="Echo VR Installation Guide"><img src="resources/thumbnail.jpg"></a>
-				<a href="vr/tips" class="tile" data-title="Nerdy VR Stuff"><img src="resources/vrcanniversary.jpg"></a>
-				<a href="https://www.figma.com/design/zmzOdmeO0u3WDrhUvhN2hJ/Rough-Design-Dumps?node-id=91-76" class="tile" target="_blank" data-title="WIP Echo VR Installer"><img src="resources/installerbg.png"></a>
-                <a href="eagler8" class="tile" data-title="Eaglercraft"><img src="resources/eaglercraft.png"></a>
-				<a href="https://proxy.avagoosa.com/" target="_blank" class="tile" data-title="Utopia Proxy"><img src="resources/space.png"></a>
-				<a href="https://github.com/Fox595676/" class="tile" target="_blank" data-title="Github"><img src="resources/ghlandscape.png"></a>
-			</div>
+		<h2>My Stuff</h2>
+		<!-- Kinda proud of these containers :3 -->
+		<div class="tile-container">
+			<a href="https://echo.avagoosa.com" class="tile" data-title="Echo VR Installer"><img
+					src="resources/thumbnail.jpg" alt="Standalone Echo VR Installer"></a>
+			<!-- <a href="vr/tips" class="tile" data-title="Nerdy VR Stuff"><img src="resources/vrcanniversary.jpg" alt="Nerdy VR Stuff"></a> -->
+			<a href="https://github.com/AvaGoosa/AvaGoosa.github.io" class="tile" target="_blank"
+				data-title="Github"><img src="resources/ghlandscape.png" alt="My Github Page"></a>
+		</div>
 	</section>
-
 
 	<section id="useful-links">
-		<h2>Useful Links:</h2>
-			<div class="container">
-				<!-- Not sure how to elegantly deal with the white-on-white situation, I tried making custom pictures but they all looked bad -->
-				<!-- Edit: I think it looks okay now! -->
-				<a href="https://pairdrop.net" target="_blank" class="tile" data-title="PairDrop"><img src="resources/pairdrop2.png"></a>
-				<a href="https://cobalt.tools" target="_blank" class="tile" data-title="Cobalt Downloader"><img src="resources/cobalt.png"></a>
-				<a href="https://discord.com/app" target="_blank" class="tile" data-title="Discord on the web"><img src="resources/discord.png"></a>
-			</div>
-	</section>
-
-	<section id="downloads">
-		<h2>Downloads</h2>
-		<p><a href="https://sidequestvr.com/link-sidequest" target="_blank">Link SideQuest</a></p>
-		<a href="apk/sidequest.apk" download class="tile" data-title="Standalone SideQuest APK"><img src="resources/sidequest.png"></a>
-		<a href="https://github.com/Fox595676/Fox595676.github.io/archive/refs/heads/main.zip" download class="tile" data-title="This site"><img src="vr/echo/resources/bg.png"></a>
+		<h2>Things I think the internet should know about</h2>
+		<ul>
+			<li><a href="https://cobalt.tools/" target="_blank">cobalt.tools</a> - a clean YouTube video downloader</li>
+			<li><a href="https://pairdrop.net/" target="_blank">pairdrop.net</a> - a WebRTC P2P transfer tool</li>
+			<li><a href="https://revolt.chat/" target="_blank">revolt.chat</a> - an open-source alternative to Discord
+			</li>
+			<li><a href="https://eightyeightthirty.one" target="_blank">eightyeightthirty.one</a> - a CRAZY web crawler
+				that links 88x31 sites</li>
+		</ul>
+		<!-- <div class="container"> -->
+		<!-- Not sure how to elegantly deal with the white-on-white situation, I tried making custom pictures but they all looked bad -->
+		<!-- Edit: I think it looks okay now! -->
+		<!-- <a href="https://pairdrop.net" target="_blank" class="tile" data-title="PairDrop"><img
+					src="resources/pairdrop2.png"></a>
+			<a href="https://cobalt.tools" target="_blank" class="tile" data-title="Cobalt Downloader"><img
+					src="resources/cobalt.png"></a> -->
+		<!-- </div> -->
 	</section>
 
 	<section id="neobuttons">
-		
-		<!-- No, I don't know JS (yet), yes I used GPT ❤❤❤❤ -->
-
-		<script>
-		    document.addEventListener('DOMContentLoaded', function() {
-		        document.querySelectorAll('.neobutton a').forEach(function(element) {
-		            var bgColor = element.getAttribute('data-bg');
-		            var fgColor = element.getAttribute('data-fg');
-		            if (bgColor) {
-		                element.style.setProperty('--tooltip-bg-color', bgColor);
-		            }
-		            if (fgColor) {
-		                element.style.setProperty('--tooltip-fg-color', fgColor);
-		            }
-		        });
-		    });
-		</script>
-
 		<h2>Buttons!</h2>
-		<div class="neobutton">
-			<p>My (very) bad ones</p>
-			<a href="http://echovr.net/" target="_blank"><img src="buttons/echo.gif"></a>
-			<a href="https://hello.vrchat.com/" target="_blank"><img src="buttons/vrchat.gif"></a>
-			<a href="https://www.linuxmint.com/rel_vanessa_xfce_whatsnew.php" target="_blank"><img src="buttons/mint.gif"></a>
-			<a href="https://vrc.group/QUEST.4261" target="_blank"><img src="buttons/ewwquest.gif"></a>
-			<p>Friendsies</p>
-			<a href="https://omy986.github.io/" target="_blank" data-tooltip="omy986" data-bg="yellow" data-fg="blue"><img src="buttons/learnhtml.gif"></a>
-			<a href="https://drakelol.fun/" target="_blank" data-tooltip="drakelol" data-bg="darkslategray" data-fg="aqua"><img src="buttons/drakelol.png"></a>
-			<a href="https://bbqneko.neocities.org/" target="_blank" data-tooltip="bbqneko" data-bg="aqua" data-fg="gray"><img src="buttons/bbqneko.png"></a>
-			<p>Clickies</p>
-			<a href="https://multimc.org/" target="_blank"><img src="buttons/minecraft.gif"></a>
-			<a href="https://cyber.dabamos.de/88x31/" target="_blank"><img src="buttons/88by31.gif"></a>
-			<a href="https://notepad-plus-plus.org/" target="_blank"><img src="buttons/notepadpp.gif"></a>
-			<a href="https://store.steampowered.com/app/400/Portal/" target="_blank"><img src="buttons/portal.png"></a>
-			<a href="https://wiby.org/" target="_blank"><img src="buttons/wiby.gif"></a>
-			<a href="https://archive.org/" target="_blank"><img src="buttons/archive.gif"></a>
-			<a href="https://fediring.net/" target="_blank"><img src="buttons/fediring.gif"></a>
-			<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ffox595676.com" target="_blank"><img src="buttons/validator.png"></a>
-			<p>Peeple cool sites</p>
-			<a href="https://corvidae.digital/" target="_blank"><img src="buttons/corvidae.gif"></a>
-			<a href="https://sneexy.pages.gay/" target="_blank"><img src="buttons/sneexy.png"></a>
-			<a href="https://besties.house/" target="_blank"><img src="buttons/besties.gif"></a>
-			<a href="https://oli.pages.gay/" target="_blank"><img src="buttons/oli.png"></a>
-			<a href="https://freeplay.floof.company/" target="_blank"><img src="buttons/freeeeeeee.gif"></a>
-			<a href="https://nano.lgbt/" target="_blank"><img src="buttons/nano.png"></a>
-			<a href="https://authenyo.xyz/" target="_blank"><img src="buttons/authen.gif"></a>
-			<a href="https://sleepy.ink/" target="_blank"><img src="buttons/sleepy.png"></a>
-			<a href="https://micro.niko.lgbt/" target="_blank"><img src="buttons/micro.jpg"></a>
-			<a href="https://zencorner.xyz/" target="_blank"><img src="buttons/zencorner.gif"></a>
-			<a href="https://sweetcoffy.pages.gay/" target="_blank"><img src="buttons/coffy.png"></a>
-			<a href="https://limepot.xyz/" target="_blank"><img src="buttons/limepot.gif"></a>
-			<a href="https://geidontei.chaotic.ninja/usr/mima/" target="_blank"><img src="buttons/usrmima.png"></a>
-			<a href="https://split.pet/" target="_blank"><img src="buttons/split.png"></a>
-			<a href="https://zvava.org/" target="_blank"><img src="buttons/zvava.png"></a>
-			<a href="https://www.lejlart.com/apple.html" target="_blank"><img src="buttons/appleart.gif"></a>
-			<a href="https://fauux.neocities.org/" target="_blank" data-tooltip="Seizure warning!"><img src="buttons/fauux.gif"></a>
-			<p>Showies</p>
-			<img src="buttons/piracy.gif">
-			<img src="buttons/linuxnow.gif">
-		</div>
-    </section>
-
-
-	<!-- WIP!!111!! -->
-		<!-- <style>
-		    #chat-container {
-		        width: 18.75em;
-		        height: 25em;
-		        border: 8px solid dimgray;
-		        background-color: #49454F;
-		        padding: 10px;
-		        color: white;
-		        display: flex;
-		        flex-direction: column;
-		    }
-
-		    .input-row-container {
-		        display: flex;
-		        flex-wrap: wrap;
-		    }
-		    
-		    .input-row {
-		        display: flex;
-		        align-items: center;
-		        width: 100%;
-		        margin-bottom: 5px;
-		    }
-		    
-		    .username-input {
-		        min-width: 50px;
-		        flex: 1;
-		    }
-
-		    .color-buttons {
-		        display: flex;
-		        flex-wrap: wrap;
-		        gap: 4.2px;
-		    }
-
-		    .color-button {
-		        width: 20px;
-		        height: 20px;
-		        border: none;
-		        cursor: pointer;
-		    }
-		    .messages-container {
-		        flex-grow: 1;
-		        overflow-y: auto;
-		        margin: 10px 0;
-		        background-color: #3D3A41;
-		    }
-		    .message-box {
-		        border-top: 1px solid white;
-		        padding-top: 10px;
-		        display: flex;
-		        align-items: center;
-		    }
-		    .username, .message {
-		        flex-grow: 1;
-		        margin-left: 5px;
-		    }
-
-		    label {
-		        white-space: nowrap;
-		    }
-		</style>
-
-		<div id="chat-container">
-			<p><b style="color: pink;">Broken and not working (yet)!!</b></p>
-		    <div class="input-row-container">
-		        <div class="input-row">
-		            <label for="username">username:</label>
-		            <input class="username-input" type="text" id="username" name="username" autocomplete="given-name">
-		        </div>
-		        <div class="input-row">
-		            <label>colour:</label>
-		            <div class="color-buttons">
-		                <button class="color-button" style="background-color: red;"></button>
-		                <button class="color-button" style="background-color: orange;"></button>
-		                <button class="color-button" style="background-color: yellow;"></button>
-		                <button class="color-button" style="background-color: green;"></button>
-		                <button class="color-button" style="background-color: blue;"></button>
-		                <button class="color-button" style="background-color: indigo;"></button>
-		                <button class="color-button" style="background-color: violet;"></button>
-		                <button class="color-button" style="background-color: pink;"></button>
-		                <button class="color-button" style="background-color: white;"></button>
-		                <button class="color-button" style="background-color: black;"></button>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="messages-container">
-			-->
-		        <!-- Messages will be added here -->
-		    <!-- </div>
-		    <div class="message-box">
-		        <label for="message" id="usernameLabel">User</label>
-		        <input class="message" type="text" id="message" name="message">
-		        <button for="message" name="sendmessage"></button>
-		    </div>
-		</div>
-
-		<script>
-		    const usernameInput = document.getElementById('username');
-		    const messageBoxLabel = document.getElementById('usernameLabel');
-		    const colorButtons = document.querySelectorAll('.color-button');
-
-		    usernameInput.addEventListener('input', function() {
-		        messageBoxLabel.textContent = this.value;
-		    });
-
-		    colorButtons.forEach(button => {
-		        button.addEventListener('click', function() {
-		            const color = this.style.backgroundColor;
-		            messageBoxLabel.style.color = color;
-		        });
-		    });
-		</script> -->
-	
-	<a href="sitemap">Sitemap - outdated</a>
+		<!-- Populated by JS :3 -->
+		<div class="neobutton"></div>
+	</section>
 
 	<div style="text-align:right">
-	<a href="https://cd5k.net/tau/">&tau;</a>
+		<a href="https://cd5k.net/tau/">&tau;</a>
 	</div>
 
 </body>
+
 </html>

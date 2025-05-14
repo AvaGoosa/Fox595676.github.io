@@ -1,0 +1,117 @@
+<!-- WIP!!111!! -->
+<style>
+	#chat-container {
+		width: 18.75em;
+		height: 25em;
+		border: 8px solid dimgray;
+		background-color: #49454F;
+		padding: 10px;
+		color: white;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.input-row-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.input-row {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 5px;
+	}
+
+	.username-input {
+		min-width: 50px;
+		flex: 1;
+	}
+
+	.color-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4.2px;
+	}
+
+	.color-button {
+		width: 20px;
+		height: 20px;
+		border: none;
+		cursor: pointer;
+	}
+
+	.messages-container {
+		flex-grow: 1;
+		overflow-y: auto;
+		margin: 10px 0;
+		background-color: #3D3A41;
+	}
+
+	.message-box {
+		border-top: 1px solid white;
+		padding-top: 10px;
+		display: flex;
+		align-items: center;
+	}
+
+	.username,
+	.message {
+		flex-grow: 1;
+		margin-left: 5px;
+	}
+
+	label {
+		white-space: nowrap;
+	}
+</style>
+
+<div id="chat-container">
+	<p><b style="color: pink;">Broken and not working (yet)!!</b></p>
+	<div class="input-row-container">
+		<div class="input-row">
+			<label for="username">username:</label>
+			<input class="username-input" type="text" id="username" name="username" autocomplete="given-name">
+		</div>
+		<div class="input-row">
+			<label>colour:</label>
+			<div class="color-buttons">
+				<button class="color-button" style="background-color: red;"></button>
+				<button class="color-button" style="background-color: orange;"></button>
+				<button class="color-button" style="background-color: yellow;"></button>
+				<button class="color-button" style="background-color: green;"></button>
+				<button class="color-button" style="background-color: blue;"></button>
+				<button class="color-button" style="background-color: indigo;"></button>
+				<button class="color-button" style="background-color: violet;"></button>
+				<button class="color-button" style="background-color: pink;"></button>
+				<button class="color-button" style="background-color: white;"></button>
+				<button class="color-button" style="background-color: black;"></button>
+			</div>
+		</div>
+	</div>
+	<div class="messages-container">
+		<!-- Messages will be added here -->
+		</div>
+		    <div class="message-box">
+		        <label for="message" id="usernameLabel">User</label>
+		        <input class="message" type="text" id="message" name="message">
+		        <button for="message" name="sendmessage"></button>
+		    </div>
+		</div>
+
+		<script>
+		    const usernameInput = document.getElementById('username');
+		    const messageBoxLabel = document.getElementById('usernameLabel');
+		    const colorButtons = document.querySelectorAll('.color-button');
+
+		    usernameInput.addEventListener('input', function() {
+		        messageBoxLabel.textContent = this.value;
+		    });
+
+		    colorButtons.forEach(button => {
+		        button.addEventListener('click', function() {
+		            const color = this.style.backgroundColor;
+		            messageBoxLabel.style.color = color;
+		        });
+		    });
+		</script>

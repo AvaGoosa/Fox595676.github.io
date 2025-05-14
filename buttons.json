@@ -1,0 +1,223 @@
+[
+    {
+        "My thingies": [
+            {
+                "alt": "Echo VR Lounge",
+                "href": "https://discord.com/invite/echo-vr-lounge/",
+                "img": "buttons/echo.gif"
+            },
+            {
+                "alt": "VRChat",
+                "href": "https://hello.vrchat.com/",
+                "img": "buttons/vrchat.gif"
+            },
+            {
+                "alt": "Linux Mint XFCE",
+                "href": "https://www.linuxmint.com/rel_vanessa_xfce_whatsnew.php",
+                "img": "buttons/mint.gif"
+            },
+            {
+                "alt": "Anti-Meta Quest",
+                "href": "https://vrc.group/QUEST.4261",
+                "img": "buttons/ewwquest.gif"
+            },
+            {
+                "href": "https://store.steampowered.com/app/17410/Mirrors_Edge/",
+                "img": "buttons/mirrorsedge.gif",
+                "alt": "Mirror's Edge"
+            },
+            {
+                "href": "https://www.pixilart.com/draw",
+                "img": "buttons/pixilart.gif",
+                "alt": "Pixilart Editor"
+            },
+            {
+                "href": "https://prismlauncher.org/",
+                "img": "buttons/prism.png",
+                "alt": "Prism Launcher"
+            },
+            {
+                "href": "https://vscode.dev",
+                "img": "buttons/vsc.png",
+                "alt": "Visual Studio Code Web Editor"
+            }
+        ]
+    },
+    {
+        "Friendsies": [
+            {
+                "href": "https://omy986.github.io/",
+                "img": "buttons/learnhtml.gif",
+                "tooltip": "omy986",
+                "bg": "yellow",
+                "fg": "blue",
+                "alt": "omy986's site"
+            },
+            {
+                "href": "https://drakelol.fun/",
+                "img": "buttons/drakelol.png",
+                "tooltip": "drakelol",
+                "bg": "darkslategray",
+                "fg": "aqua",
+                "alt": "drakelol's website"
+            },
+            {
+                "href": "https://bbqneko.neocities.org/",
+                "img": "https://bbqneko.neocities.org/bbqneko.png",
+                "tooltip": "bbqneko",
+                "bg": "aqua",
+                "fg": "gray",
+                "alt": "bbqneko's Neocity!"
+            }
+        ]
+    },
+    {
+        "Clickies": [
+            {
+                "href": "https://debian.org",
+                "img": "buttons/debian.gif",
+                "alt": "Powered by Debian!"
+            },
+            {
+                "href": "https://cyber.dabamos.de/88x31/",
+                "img": "buttons/88by31.gif",
+                "alt": "88x31 Button Gallery"
+            },
+            {
+                "href": "https://store.steampowered.com/app/400/Portal/",
+                "img": "buttons/portal.png",
+                "alt": "Portal!!!"
+            },
+            {
+                "href": "https://wiby.org/",
+                "img": "buttons/wiby.gif",
+                "alt": "Wiby search engine"
+            },
+            {
+                "href": "https://archive.org/",
+                "img": "buttons/archive.gif",
+                "alt": "Internet Archive"
+            },
+            {
+                "href": "https://fediring.net/",
+                "img": "buttons/fediring.gif",
+                "alt": "Fediring"
+            },
+            {
+                "href": "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Favagoosa.com",
+                "img": "buttons/validator.png",
+                "alt": "W3C HTML Validator"
+            }
+        ]
+    },
+    {
+        "Peeple cool sites": [
+            {
+                "href": "https://corvidae.digital/",
+                "img": "https://corvidae.digital/graphics/sitebuttons/button2alt.gif",
+                "alt": "Corvidae Digital"
+            },
+            {
+                "href": "https://sneexy.pages.gay/",
+                "img": "buttons/sneexy.png",
+                "alt": "Sneexy's site"
+            },
+            {
+                "href": "https://besties.house/",
+                "img": "https://besties.house/buttons/besties.gif",
+                "alt": "Besties House"
+            },
+            {
+                "href": "https://oli.pages.gay/",
+                "img": "https://floof.gay/img/badges/oli.svg",
+                "alt": "Oli's page"
+            },
+            {
+                "href": "https://freeplay.floof.company/",
+                "img": "https://freeplay.floof.company/assets/buttons/free.gif",
+                "alt": "Freeplay by Floof Company"
+            },
+            {
+                "href": "https://nano.lgbt/",
+                "img": "buttons/nano.png",
+                "alt": "Nano's site"
+            },
+            {
+                "href": "https://authenyo.xyz/",
+                "img": "https://authenyo.xyz/images/button.gif",
+                "alt": "Authenyo"
+            },
+            {
+                "href": "https://sleepy.ink/",
+                "img": "buttons/sleepy.png",
+                "alt": "Sleepy Ink"
+            },
+            {
+                "href": "https://micro.niko.lgbt/",
+                "img": "https://microspinny.zip/static/button_1.avif",
+                "alt": "Micro Niko"
+            },
+            {
+                "href": "https://zencorner.xyz/",
+                "img": "https://zencorner.xyz/img/zencorner-classic.gif",
+                "alt": "Zen Corner"
+            },
+            {
+                "href": "https://sweetcoffy.pages.gay/",
+                "img": "https://sweetcoffy.pages.gay/assets/button.png",
+                "alt": "Sweet Coffy"
+            },
+            {
+                "href": "https://limepot.xyz/",
+                "img": "buttons/limepot.gif",
+                "alt": "Limepot"
+            },
+            {
+                "href": "https://geidontei.chaotic.ninja/usr/mima/",
+                "img": "buttons/usrmima.png",
+                "alt": "usrmima"
+            },
+            {
+                "href": "https://split.pet/",
+                "img": "https://split.pet/88x31/split.png",
+                "alt": "Split Pet"
+            },
+            {
+                "href": "https://zvava.org/",
+                "img": "https://zvava.org/images/buttons/zvava.org.png",
+                "alt": "Zvava"
+            },
+            {
+                "href": "https://www.lejlart.com/apple.html",
+                "img": "buttons/appleart.gif",
+                "alt": "Lejlart Apple"
+            },
+            {
+                "href": "https://fauux.neocities.org/",
+                "img": "https://fauux.neocities.org/fauux-btn-01.gif",
+                "tooltip": "Seizure warning!",
+                "alt": "Fauux"
+            },
+            {
+                "href": "https://goblin-heart.net/sadgrl/",
+                "img": "https://goblin-heart.net/sadgrl/assets/images/buttons/sadgrlonline.gif",
+                "alt": "Sadgirl Online"
+            }
+        ]
+    },
+    {
+        "Showies": [
+            {
+                "img": "buttons/piracy.gif",
+                "alt": "Piracy is a service problem"
+            },
+            {
+                "img": "buttons/linuxnow.gif",
+                "alt": "Linux Now"
+            },
+            {
+                "img": "buttons/js.jpg"
+            }
+        ]
+    }
+]

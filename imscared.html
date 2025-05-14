@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="pfp/oldpfphighresbgrounded.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="index.js"></script>
+    <title>imscared</title>
+
+    <style>
+        body {
+            filter: url(#fisheye);
+        }
+
+        svg {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+    </style>
+</head>
+
+<svg>
+	<filter id="fisheye">
+		<feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.5" numOctaves="0.1" result="noise" />
+		<feDisplacementMap id="displacement" in2="lightMap" in="SourceGraphic" xChannelSelector="R" yChannelSelector="G" scale="5" />
+	</filter>
+</svg>
+<script>
+	let baseFrequency = 0.5;
+	let increasing = true;
+
+	function oscillateFrequency() {
+		const turbulence = document.getElementById('turbulence');
+		if (increasing) {
+			baseFrequency += 0.01;
+			if (baseFrequency >= 1) increasing = false;
+		} else {
+			baseFrequency -= 0.01;
+			if (baseFrequency <= 0.1) increasing = true;
+		}
+		turbulence.setAttribute('baseFrequency', baseFrequency.toFixed(2));
+		requestAnimationFrame(oscillateFrequency);
+	}
+
+	oscillateFrequency();
+</script>
+
+<body>
+    <img src="">
+</body>
