@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>16-bit Magic</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    #page-content {
+      position: relative;
+      z-index: 0;
+      padding: 2rem;
+      font-family: monospace;
+      color: white;
+      background: linear-gradient(to bottom right, #223, #446);
+    }
+
+    #shader-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="page-content">
+    <h1>Hello, 16-bit World</h1>
+    <p>This whole page is filtered to look like a retro console.</p>
+    <img src="image.png" width="500">
+    <img src="https://avagoosa.com/resources/installerbg.png">
+  </div>
+  <canvas id="shader-canvas"></canvas>
+
+  <!-- Shader code -->
+  <script type="x-shader/x-fragment" id="frag-shader">
+    precision mediump float;
+
+    uniform sampler2D u_texture;
+    varying vec2 v_uv;
+
+    vec3 posterise(vec3 color) {
+      color.r = floor(color.r * 31.0) / 31.0;
+      color.g = floor(color.g * 63.0) / 63.0;
+      color.b = floor(color.b * 31.0) / 31.0;
+      return color;
+    }
+
+    void main() {
+      vec3 color = texture2D(u_texture, v_uv).rgb;
+      gl_FragColor = vec4(posterise(color), 1.0);
+    }
+  </script>
+
+  <!-- Load html2canvas -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <script>
+    const canvas = document.getElementById("shader-canvas");
+    const gl = canvas.getContext("webgl");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const vertSrc = `
+      attribute vec2 a_position;
+      varying vec2 v_uv;
+      void main() {
+        v_uv = (a_position + 1.0) / 2.0;
+        gl_Position = vec4(a_position, 0, 1);
+      }
+    `;
+
+    const fragSrc = document.getElementById("frag-shader").textContent;
+
+    function compileShader(type, source) {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, source);
+      gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(s));
+      }
+      return s;
+    }
+
+    const program = gl.createProgram();
+    gl.attachShader(program, compileShader(gl.VERTEX_SHADER, vertSrc));
+    gl.attachShader(program, compileShader(gl.FRAGMENT_SHADER, fragSrc));
+    gl.linkProgram(program);
+    gl.useProgram(program);
+
+    const quad = new Float32Array([
+      -1, -1, 1, -1, -1, 1,
+      -1, 1, 1, -1, 1, 1
+    ]);
+
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, quad, gl.STATIC_DRAW);
+
+    const loc = gl.getAttribLocation(program, "a_position");
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+    const texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+    const texLoc = gl.getUniformLocation(program, "u_texture");
+    gl.uniform1i(texLoc, 0);
+
+    function allImagesLoaded() {
+  const imgs = document.querySelectorAll("#page-content img");
+  return Array.from(imgs).every(img => img.complete);
+}
+
+function renderLoop() {
+  if (!allImagesLoaded()) {
+    requestAnimationFrame(renderLoop);
+    return;
+  }
+
+  updateTexture(() => {
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    requestAnimationFrame(renderLoop);
+  });
+}
+  </script>
+</body>
+</html>

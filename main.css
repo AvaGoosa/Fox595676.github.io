@@ -19,6 +19,8 @@ html {
 
 body {
   font-family: monospace;
+  /* font-family: Quicksand; */
+    /* src: url(quicksand/Quicksand-Regular.ttf); */
   /*font-family: sans-serif;*/
   color: white;
   font-size: 16px;
@@ -51,7 +53,8 @@ hr {
   .tile-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5vw;
+  gap: 10px;
+  row-gap: 10px;
 }
 
 .tile {
